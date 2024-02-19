@@ -11,18 +11,24 @@ const classes = {
   root: stack({
     display: "flex",
     alignItems: "start",
+    justifyContent: "space-between",
     flexDirection: "row",
     padding: "4",
     columnGap: "4",
     borderRadius: "xl",
     backgroundColor: "white",
   }),
-  avatar: circle({ size: "12", aspectRatio: "1" }),
+  avatar: circle({ size: "12", aspectRatio: "square" }),
   main: css({ display: "flex", flexDirection: "column", gap: "2" }),
-  header: css({ display: "flex", justifyContent: "space-between", alignItems: "center" }),
-  time: css({ fontSize: "sm" }),
+  header: css({
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    textStyle: "body-sm",
+    "& > time": { textStyle: "body-xs"}
+  }),
   body: css({}),
-  strong: css({ fontWeight: "bold" }),
+  strong: css({ textStyle: "body-xs" }),
 };
 
 export function Sample14() {
@@ -33,11 +39,12 @@ export function Sample14() {
       <div className={classes.main}>
         <div className={classes.header}>
           <span>Updated Price</span>
-          <time className={classes.time}>02/09</time>
+          <time>02/09</time>
         </div>
 
         <div className={classes.body}>
-          <strong className={classes.strong}>Two price updates</strong> have been made to <strong className={classes.strong}>the saved properties</strong>
+          <strong className={classes.strong}>Two price updates</strong> have been made to{" "}
+          <strong className={classes.strong}>the saved properties</strong>
         </div>
       </div>
     </article>
