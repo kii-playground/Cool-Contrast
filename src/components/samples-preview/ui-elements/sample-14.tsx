@@ -25,10 +25,9 @@ const classes = {
     justifyContent: "space-between",
     alignItems: "center",
     textStyle: "body-sm",
-    "& > time": { textStyle: "body-xs"}
+    "& > time": { textStyle: "body-xs" },
   }),
-  body: css({}),
-  strong: css({ textStyle: "body-xs" }),
+  body: css({ "& > strong": { textStyle: "body-xs" } }),
 };
 
 export function Sample14() {
@@ -43,8 +42,7 @@ export function Sample14() {
         </div>
 
         <div className={classes.body}>
-          <strong className={classes.strong}>Two price updates</strong> have been made to{" "}
-          <strong className={classes.strong}>the saved properties</strong>
+          <strong>Two price updates</strong> have been made to <strong>the saved properties</strong>
         </div>
       </div>
     </article>
