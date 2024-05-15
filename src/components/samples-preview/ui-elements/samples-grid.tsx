@@ -15,6 +15,7 @@ import { Sample9 } from "./sample-9";
 import { Sample11 } from "./sample-11";
 import { Sample12 } from "./sample-12";
 import { Sample13 } from "./sample-13";
+import { Sample14 } from "./sample-14";
 
 export function SamplesGrid() {
   return (
@@ -35,6 +36,7 @@ export function SamplesGrid() {
         <Sample11 />
         <Sample12 />
         <Sample13 />
+        <Sample14 />
       </Masonry>
     </ResponsiveMasonry>
   );
